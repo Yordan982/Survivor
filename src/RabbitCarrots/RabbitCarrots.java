@@ -6,7 +6,7 @@ import static RabbitCarrots.ErrorMessages.CHARS_NUMBER_NOT_MATCHING_INPUT;
 import static RabbitCarrots.ErrorMessages.INPUT_IS_NOT_A_NUMBER;
 
 public class RabbitCarrots {
-    public final static char CHEESE = 'C';
+    public final static char CARROT = 'C';
     public final static char EMPTY_FIELD = '-';
 
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class RabbitCarrots {
                 String[] lineInput = scanner.nextLine().split(",\\s*");
                 for (int col = 0; col < gardenSize; col++) {
                     char currentChar = lineInput[col].charAt(0);
-                    if (lineInput[col].charAt(0) != CHEESE && lineInput[col].charAt(0) != EMPTY_FIELD) {
+                    if (lineInput[col].charAt(0) != CARROT && lineInput[col].charAt(0) != EMPTY_FIELD) {
                         currentChar = EMPTY_FIELD;
                     }
                     garden[row][col] = currentChar;
@@ -43,7 +43,7 @@ public class RabbitCarrots {
         boolean[][] visited = new boolean[array.length][array[0].length];
         for (int row = 0; row < array.length; row++) {
             for (int col = 0; col < array[row].length; col++) {
-                if ((array[row][col]) == CHEESE && !visited[row][col]) {
+                if ((array[row][col]) == CARROT && !visited[row][col]) {
                     checkIfVisited(array, visited, row, col);
                     jumps++;
                 }
